@@ -10,7 +10,7 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  
+
   <style>
     body {
       background-color: #0f172a;
@@ -30,22 +30,20 @@
 <body class="text-white">
 
 <div id="app" class="min-h-screen flex flex-col items-center justify-center p-6">
-  <h1 class="text-4xl font-bold mb-8 animate__animated animate__fadeInDown">Dashboard</h1>
+
 
   <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-6xl">
-    <div v-for="(item, index) in items" 
-         :key="index"
-         class="bento-card p-6 flex flex-col justify-between animate__animated animate__fadeInUp"
-         :style="{ gridColumn: item.cols, gridRow: item.rows }">
-      <div>
-        <h2 class="text-xl font-semibold mb-2">{{ item.title }}</h2>
-        <p class="text-sm opacity-80">{{ item.description }}</p>
-      </div>
-      <div class="mt-4">
-        <img :src="item.image" class="w-full rounded-lg shadow-lg" />
-      </div>
+    
+    <div class="bento-card p-4 col-span-4 animate__animated animate__fadeInUp">
+      <iframe aria-label="¡Crea tu cuenta!"
+              frameborder="0"
+              style="height:1100px;width:100%;border:none;border-radius:0.75rem;"
+              src="https://forms.zohopublic.com/victor20251/form/Leads/formperma/gbrLNSa3xc260sN8XWz2BElmsnPT0VhpYCvkQbkMqK4">
+      </iframe>
     </div>
+
   </div>
+
 </div>
 
 <script>
@@ -53,40 +51,7 @@ const { createApp } = Vue;
 
 createApp({
   data() {
-    return {
-      items: [
-        {
-          title: "Dashboard",
-          description: "Vista general de métricas y datos clave.",
-          image: "https://source.unsplash.com/400x300/?dashboard,tech",
-          cols: "span 2", rows: "span 2"
-        },
-        {
-          title: "Analytics",
-          description: "Reportes visuales con estadísticas.",
-          image: "https://source.unsplash.com/400x300/?analytics,data",
-          cols: "span 2", rows: "span 1"
-        },
-        {
-          title: "Perfil de Usuario",
-          description: "Información y configuración del usuario.",
-          image: "https://source.unsplash.com/400x300/?profile,user",
-          cols: "span 1", rows: "span 1"
-        },
-        {
-          title: "Mensajes",
-          description: "Comunicación en tiempo real.",
-          image: "https://source.unsplash.com/400x300/?chat,messages",
-          cols: "span 1", rows: "span 1"
-        },
-        {
-          title: "Calendario",
-          description: "Organiza y planifica eventos.",
-          image: "https://source.unsplash.com/400x300/?calendar,planning",
-          cols: "span 2", rows: "span 1"
-        }
-      ]
-    }
+    return {};
   }
 }).mount('#app');
 </script>
